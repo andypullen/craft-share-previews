@@ -32,7 +32,7 @@ class TemplateSelectField extends Field
         return true;
     }
 
-    public static function valueType(): string
+    public static function phpType(): string
     {
         return 'int|null';
     }
@@ -157,7 +157,7 @@ class TemplateSelectField extends Field
         ]);
     }
 
-    public function getInputHtml($value, ElementInterface $element = null): string
+    public function getInputHtml(mixed $value, ?\craft\base\ElementInterface $element = null): string
     {
         $plugin = SharePreviews::getInstance();
 
